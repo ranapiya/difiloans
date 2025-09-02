@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Shield, Wallet } from "lucide-react"
+import { Shield} from "lucide-react"
+import ConnectButton from "../ConnectButton"
 
 export function Hero() {
   return (
@@ -17,10 +18,7 @@ export function Hero() {
       </p>
       <div className="flex items-center gap-3">
         <Button className="bg-gradient-to-r from-sky-500 to-teal-500 text-black hover:opacity-90">Get Started</Button>
-        <Button variant="outline" className="border-white/15 bg-white/5 text-white hover:bg-white/10">
-          <Wallet className="mr-2 h-4 w-4" aria-hidden="true" />
-          Connect Wallet
-        </Button>
+        <ConnectButton/>
       </div>
     </header>
   )

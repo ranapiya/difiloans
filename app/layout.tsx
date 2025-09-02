@@ -1,39 +1,39 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
-import { Inter, Montserrat } from "next/font/google"
-import { Suspense } from "react"
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-})
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-montserrat",
-})
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { headers } from "next/headers"; // added
+import ContextProvider from "@/context";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
-}
+  title: "Memory Arena",
+  description: "A Memory Arena",
+  icons: {
+    icon: "/logo.jpg", 
+  },
+};
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const headersObj = await headers();
+  const cookies = headersObj.get("cookie");
   return (
-    <html lang="en" className={`${inter.variable} ${montserrat.variable} antialiased`}>
+    <html lang="en">
+      <head>
+        <style>{`
+html {
+  font-family: ${GeistSans.style.fontFamily};
+  --font-sans: ${GeistSans.variable};
+  --font-mono: ${GeistMono.variable};
+}
+        `}</style>
+      </head>
       <body className="bg-black text-white font-sans">
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        <ContextProvider cookies={cookies}>{children}</ContextProvider>
       </body>
-      <Analytics />
     </html>
-  )
+  );
 }
