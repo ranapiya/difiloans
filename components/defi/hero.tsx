@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
+
 import { Shield} from "lucide-react"
-import ConnectButton from "../ConnectButton"
+
 
 export function Hero() {
   return (
@@ -16,10 +16,6 @@ export function Hero() {
         Access instant liquidity using your NFTs as collateral. Transparent rates, clear terms, and a seamless
         experience.
       </p>
-      <div className="flex items-center gap-3">
-        <Button className="bg-gradient-to-r from-sky-500 to-teal-500 text-black hover:opacity-90">Get Started</Button>
-        <ConnectButton/>
-      </div>
     </header>
   )
 }

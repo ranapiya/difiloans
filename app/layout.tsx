@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { headers } from "next/headers"; // added
+import { headers } from "next/headers"; 
 import ContextProvider from "@/context";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Memory Arena",
-  description: "A Memory Arena",
-  icons: {
-    icon: "/logo.jpg", 
-  },
+  title: "Difiloans",
+  description: "NFT-based DeFi Lending and Borrowing Protocol",
 };
 
 export default async function RootLayout({
