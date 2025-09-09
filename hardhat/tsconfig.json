@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "types": ["hardhat", "@nomiclabs/hardhat-ethers"],
+    "lib": ["es2023"],
+    "module": "node16",
+    "target": "es2022",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node16",
+    "outDir": "dist"
+  },
+  "include": ["./scripts", "./test", "./typechain-types", "./hardhat.d.ts"]
+}
