@@ -1,5 +1,6 @@
-import { LoanForm } from '@/components/defi/loan-form'
+import StartLoan from '@/components/defi/loan-form'
 import Header from '@/components/Header'
+import LendingActions from '@/components/LendingActions'
 import React from 'react'
 
 const Page = () => {
@@ -20,9 +21,10 @@ const Page = () => {
       {/* Form centered */}
       <div className="flex-1 flex items-center justify-center px-4">
         <div className="w-full max-w-md">
-          <LoanForm />
+          <StartLoan />
         </div>
       </div>
+      
     </main>
   )
 }

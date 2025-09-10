@@ -7216,7 +7216,7 @@ snapshots:
 
   '@types/bn.js@5.2.0':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.7.5
 
   '@types/chai-as-promised@7.1.8':
     dependencies:
@@ -7259,7 +7259,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 6.0.0
-      '@types/node': 22.0.0
+      '@types/node': 22.7.5
 
   '@types/lodash@4.17.20': {}
 
@@ -7281,7 +7281,7 @@ snapshots:
 
   '@types/pbkdf2@3.1.2':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.7.5
 
   '@types/prettier@2.7.3': {}
 
@@ -7295,7 +7295,7 @@ snapshots:
 
   '@types/secp256k1@4.0.6':
     dependencies:
-      '@types/node': 22.0.0
+      '@types/node': 22.7.5
 
   '@types/trusted-types@2.0.7': {}
 
@@ -8808,7 +8808,7 @@ snapshots:
     dependencies:
       cipher-base: 1.0.6
       inherits: 2.0.4
-      ripemd160: 2.0.1
+      ripemd160: 2.0.2
       sha.js: 2.4.12
 
   create-hash@1.2.0:
